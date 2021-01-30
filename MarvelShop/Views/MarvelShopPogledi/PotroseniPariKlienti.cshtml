@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MarvelShop.Models.KlientPromet>
+@{
+    ViewBag.Title = "PotroseniPariKlienti";
+}
+
+<h2>PotroseniPariKlienti</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ime);
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sum)
+        </th>
+       
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sum)
+            </td>
+            
+        </tr>
+    }
+
+</table>
+

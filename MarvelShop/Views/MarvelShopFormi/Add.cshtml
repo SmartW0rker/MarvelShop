@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MarvelShop.Models.Kosnicka>
+@using MarvelShop.Models;
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.broj_proizvodi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.embg)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.broj_proizvodi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.embg)
+        </td>
+        <td>
+            @if (item.status)
+            {
+            @Html.ActionLink("Dodadi", "Dodadi", new { Id = item.id_kosnicka, Date = @ViewBag.IdProizvod });
+            }
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,59 @@
+﻿@model MarvelShop.Models.Proizvod
+
+@{
+    ViewBag.Title = "Submit";
+}
+
+<h2>Submit</h2>
+
+<div>
+    <h4>Proizvod</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.legenda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.legenda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cena_proizvod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cena_proizvod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kolicina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kolicina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ime_proizvod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ime_proizvod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_proizvod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_proizvod)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_proizvod }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

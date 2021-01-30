@@ -1,0 +1,50 @@
+﻿@model IEnumerable<MarvelShop.Models.Proizvod>
+
+@{
+    ViewBag.Title = "Forma1";
+}
+
+<h2>Forma1</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ime_proizvod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.legenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cena_proizvod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kolicina)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ime_proizvod)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.legenda)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.cena_proizvod)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.kolicina)
+    </td>
+
+    <td>
+        @if (item.kolicina > 0)
+        {
+        @Html.ActionLink("Add", "Add", new { id = item.id_proizvod })
+        }
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MarvelShop.Models.KupenoKlient>
+@{
+    ViewBag.Title = "Kupeno";
+}
+
+<h2>Kupeno</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prezime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ime_proizvod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_proizvod)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prezime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ime_proizvod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_proizvod)
+            </td>
+        </tr>
+    }
+
+</table>
+

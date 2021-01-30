@@ -1,0 +1,37 @@
+﻿@using MarvelShop.Models;
+@{
+    ViewBag.Title = "ProizvodProfit";
+}
+<h2>ProizvodProfit</h2>
+<h3>
+    Proizvod koj donel najgolem profit za kompanijata e:
+</h3>
+<table class="table">
+<tr>
+    <th>
+        Ime_proizvod:
+    </th>
+    <th>
+        Cena_proizvod:
+    </th>
+    <th>
+        Suma
+    </th>
+    <th></th>
+</tr>
+
+    <tr>
+        <td>
+           @ViewBag.ProizvodMax.ime_proizvod
+        </td>
+        <td>
+           @ViewBag.ProizvodMax.cena_proizvod
+        </td>
+        <td>
+            @ViewBag.ProizvodMax.suma
+        </td>
+
+    </tr>
+
+</table>
+

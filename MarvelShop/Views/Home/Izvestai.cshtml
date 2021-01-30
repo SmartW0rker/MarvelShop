@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Izvestai vo vrska so aplikacijata";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>Hristijan Chochevski</h3>
+
+<div class="glyphicon-align-center">
+    <ul>
+        <li class="btn btn-success">
+            @Html.ActionLink("Proizvod kod donel najmnogu profit", "ProizvodProfit", "MarvelShopIzvestai")
+        </li>
+        <li class="btn btn-success">
+            @Html.ActionLink("Broj na prodadenni parcinja od sekoj proizvod", "ProdadeniParcinja", "MarvelShopIzvestai")
+        </li>
+        <li class="btn btn-success">
+            @Html.ActionLink("Izvestaj za potroseni pari od klienti", "PotroseniPariKlienti", "MarvelShopPogledi")
+        </li>
+    </ul>
+</div>

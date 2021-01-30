@@ -1,0 +1,21 @@
+﻿@using MarvelShop.Models;
+
+@{
+    ViewBag.Title = "Formi vo vrska so aplikacijata";
+}
+    <h2>@ViewBag.Title.</h2>
+    <h3>Hristijan Chochevski</h3>
+    <div class="glyphicon-align-center">
+        <ul>
+            <li class="btn btn-success">
+                @Html.ActionLink("Forma za dodavajne vo kosnicka", "Forma1", "MarvelShopFormi")
+            </li>
+            <li class="btn btn-success">
+                @Html.ActionLink("Forma za naracka od kosnicka", "Naracka", "MarvelShopFormi")
+            </li>
+            <li class="btn btn-success">
+                @Html.ActionLink("Forma za nov proizvod", "NovProizvod", "MarvelShopFormi")
+            </li>
+        </ul>
+    </div>
+

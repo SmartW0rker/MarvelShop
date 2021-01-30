@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MarvelShop.Models.CenaKosnicka>
+@{
+    ViewBag.Title = "CenaKosnicka";
+}
+
+<h2>CenaKosnicka</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_kosnicka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.broj_proizvodi)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_kosnicka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.broj_proizvodi)
+            </td>
+          
+        </tr>
+    }
+
+</table>
